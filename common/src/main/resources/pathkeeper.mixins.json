@@ -4,8 +4,10 @@
   "package": "io.github.emberbocor.pathkeeper.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "BlockTransformerMixin",
     "DirtPathBlockMixin",
-    "ShovelItemMixin"
+    "MatchingBlockTagPredicateAccessor",
+    "StateTestingPredicateMixin"
   ],
   "injectors": {
     "defaultRequire": 1
