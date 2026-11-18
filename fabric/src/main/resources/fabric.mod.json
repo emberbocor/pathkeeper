@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "${mod_id}",
+  "version": "${mod_version}",
+  "name": "${mod_name}",
+  "description": "Dirt paths no longer turn into dirt under slabs, stairs, fences and other blocks that are not full cubes, and shovels can make paths under them. Only needed on the server.",
+  "authors": [
+    "emberbocor"
+  ],
+  "contact": {
+    "homepage": "https://github.com/emberbocor/pathkeeper",
+    "sources": "https://github.com/emberbocor/pathkeeper",
+    "issues": "https://github.com/emberbocor/pathkeeper/issues"
+  },
+  "license": "${mod_license}",
+  "environment": "*",
+  "mixins": [
+    "${mod_id}.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": "${fabric_loader_version_range}",
+    "minecraft": "${fabric_minecraft_version_range}",
+    "java": ">=21"
+  }
+}
