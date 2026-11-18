@@ -2,7 +2,8 @@
   "required": true,
   "minVersion": "0.8",
   "package": "io.github.emberbocor.pathkeeper.mixin",
-  "compatibilityLevel": "JAVA_21",
+  "refmap": "pathkeeper.refmap.json",
+  "compatibilityLevel": "JAVA_17",
   "mixins": [
     "DirtPathBlockMixin",
     "ShovelItemMixin"

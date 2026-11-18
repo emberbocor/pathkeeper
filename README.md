@@ -43,13 +43,13 @@ What stays vanilla:
 
 ## Requirements
 
-| | NeoForge | Forge | Fabric |
-|---|---|---|---|
-| Minecraft | 1.21.1 | 1.21.1 | 1.21 or 1.21.1 |
-| Loader | NeoForge 21.1.1 or newer | Forge 52.0.0 or newer | Fabric Loader 0.15.10 or newer |
-| Jar | `pathkeeper-neoforge-1.21.1-<version>.jar` | `pathkeeper-forge-1.21.1-<version>.jar` | `pathkeeper-fabric-1.21-1.21.1-<version>.jar` |
+| | Forge / NeoForge | Fabric |
+|---|---|---|
+| Minecraft | 1.20.1 | 1.20 or 1.20.1 |
+| Loader | Forge 47.1.0 or newer, or NeoForge 1.20.1 (47.1.x) | Fabric Loader 0.14.21 or newer |
+| Jar | `pathkeeper-forge-1.20.1-<version>.jar` | `pathkeeper-fabric-1.20-1.20.1-<version>.jar` |
 
-On Minecraft 1.21.1, NeoForge and Forge are separate loaders that do not run each other's mods, so each has its own jar. Pick the jar that matches your server's loader.
+On Minecraft 1.20.1, NeoForge still runs Forge mods, so the Forge jar is used for both.
 
 The Fabric version does not need Fabric API.
 
@@ -57,8 +57,7 @@ The Fabric version does not need Fabric API.
 
 Install the mod on the server only, on every loader. It adds no items, blocks, entities, sounds, network messages or registries, so the server has nothing a client needs to know about:
 
-- **NeoForge:** vanilla clients and NeoForge clients without the mod can join.
-- **Forge:** vanilla clients and Forge clients without the mod can join. The mod is marked as server-only, so a Forge client without it still shows the server as compatible in the server list.
+- **Forge and NeoForge:** vanilla clients and Forge or NeoForge clients without the mod can join. The mod is marked as server-only, so a client without it still shows the server as compatible in the server list.
 - **Fabric:** vanilla clients and Fabric clients without the mod can join.
 
 Players without the mod see the paths like everyone else. When such a player makes a path under a non-full block, the path appears and the shovel loses durability, but that player does not see their own arm swing or hear the shovel sound; other players nearby hear it. Installing the mod on a client as well brings back the swing and the sound for that player.
@@ -81,7 +80,7 @@ The world opens normally. The mod saves nothing of its own. Paths under non-full
 ./gradlew build
 ```
 
-The jars are written to `neoforge/build/libs/`, `forge/build/libs/` and `fabric/build/libs/`.
+The jars are written to `forge/build/libs/` and `fabric/build/libs/`.
 
 ## License
 
