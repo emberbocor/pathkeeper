@@ -2,6 +2,7 @@ package io.github.emberbocor.pathkeeper;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 
@@ -13,7 +14,10 @@ public final class PathCover {
         return !Block.isShapeFullBlock(state.getShape(level, pos));
     }
 
-    public static boolean allowsFlattening(BlockGetter level, BlockPos pos, BlockState state) {
-        return state.isAir() || state.getFluidState().isEmpty() && keepsPath(level, pos, state);
+    public static boolean allowsFlattening(LevelReader level, BlockPos pos, BlockState state) {
+        return state.isAir()
+                || state.getFluidState().isEmpty()
+                && keepsPath(level, pos, state)
+                && state.canSurvive(new PathView(level, pos.below()), pos);
     }
 }

@@ -31,12 +31,12 @@ Paths stay under, for example:
 
 Paths still turn into dirt under blocks with a full-cube outline, for example stone, dirt, planks, glass, leaves, ice, soul sand, mud, honey blocks, barrels and double slabs.
 
-Shovels follow the same rule. A shovel turns the block into a path when the block above is air, or when its outline is not a full cube and it holds no fluid. A waterlogged slab or a block with water or lava in it still stops the shovel, and so does every block with a full-cube outline.
+Shovels follow the same rule. A shovel turns the block into a path when the block above is air, or when its outline is not a full cube, it holds no fluid and it can stand on a path. A waterlogged slab or a block with water or lava in it still stops the shovel, and so does every block with a full-cube outline.
 
 What stays vanilla:
 
 - **Look and height.** Paths look the same and stay 15/16 of a block high.
-- **Placing blocks on paths.** Standing torches, doors, rails, pressure plates, lanterns, candles, flowers and saplings still cannot be placed on a path. When a shovel turns the block under one of them into a path, it drops as an item, just as when its support is removed in vanilla.
+- **Placing blocks on paths.** Standing torches, doors, rails, pressure plates, lanterns, candles, flowers and saplings still cannot be placed on a path. A shovel does not make a path under them either, so nothing breaks or drops.
 - **Farmland and hoes.** Hoes, farmland and trampling work as in vanilla.
 - **Other shovel uses.** Putting out campfires with a shovel works as in vanilla.
 - **Mobs.** Pathfinding and mob behaviour on paths are not changed.
