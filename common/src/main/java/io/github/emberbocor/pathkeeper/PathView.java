@@ -2,14 +2,12 @@ package io.github.emberbocor.pathkeeper;
 
 import java.util.List;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
 import net.minecraft.core.Holder;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.world.attribute.EnvironmentAttributeReader;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.ColorResolver;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.biome.BiomeManager;
@@ -119,18 +117,8 @@ final class PathView implements LevelReader {
     }
 
     @Override
-    public float getShade(Direction direction, boolean shade) {
-        return this.level.getShade(direction, shade);
-    }
-
-    @Override
     public LevelLightEngine getLightEngine() {
         return this.level.getLightEngine();
-    }
-
-    @Override
-    public int getBlockTint(BlockPos pos, ColorResolver colorResolver) {
-        return this.level.getBlockTint(pos, colorResolver);
     }
 
     @Override
