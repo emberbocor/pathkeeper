@@ -73,8 +73,9 @@ The world opens normally. The mod saves nothing of its own. Paths under non-full
 
 - Blocks from other mods follow the same outline rule.
 - Path blocks from other mods that use the vanilla path block code follow the same rule.
-- On NeoForge and Forge, blocks that other mods make flattenable with a shovel follow the new rule for the block above as well.
-- Shovels from other mods are covered when they use the vanilla shovel code. Tools with their own path-making code keep their own rules.
+- Blocks that a datapack or another mod adds to the shovel's path-making data follow the new rule for the block above as well, on every loader.
+- Shovels from other mods are covered when they use the vanilla minecraft:shovel block transformer. Tools with their own path-making code keep their own rules.
+- Datapacks that change the shovel's path-making data are respected. If a datapack removes or replaces the air check above the block, the mod leaves that change alone.
 
 ## Building from source
 
